@@ -32,7 +32,7 @@ public class TurnDegrees extends CommandBase {
   public void initialize() {
     // Set motors to stop, read encoder values for starting point
     m_drive.arcadeDrive(0, 0);
-    m_drive.resetEncoders();
+    // m_drive.resetEncoders();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -61,8 +61,9 @@ public class TurnDegrees extends CommandBase {
   }
 
   private double getAverageTurningDistance() {
-    double leftDistance = Math.abs(m_drive.getLeftDistanceInch());
-    double rightDistance = Math.abs(m_drive.getRightDistanceInch());
-    return (leftDistance + rightDistance) / 2.0;
+    // double leftDistance = Math.abs(m_drive.getLeftDistanceInch());
+    // double rightDistance = Math.abs(m_drive.getRightDistanceInch());
+    // return (leftDistance + rightDistance) / 2.0;
+    return 0;
   }
 }

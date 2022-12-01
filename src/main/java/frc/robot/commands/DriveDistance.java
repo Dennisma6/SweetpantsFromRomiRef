@@ -31,7 +31,7 @@ public class DriveDistance extends CommandBase {
   @Override
   public void initialize() {
     m_drive.arcadeDrive(0, 0);
-    m_drive.resetEncoders();
+    // m_drive.resetEncoders();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
@@ -50,6 +50,7 @@ public class DriveDistance extends CommandBase {
   @Override
   public boolean isFinished() {
     // Compare distance travelled from start to desired distance
-    return Math.abs(m_drive.getAverageDistanceInch()) >= m_distance;
+    // return Math.abs(m_drive.getAverageDistanceInch()) >= m_distance;
+    return false;
   }
 }
